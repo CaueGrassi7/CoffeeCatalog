@@ -1,0 +1,56 @@
+/* app/assets/stylesheets/home.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Use a nova fonte e fallback para sans-serif */
+    /* ... outros estilos ... */
+  }
+  
+  h1, h2, p, strong {
+    /* Seletor de elementos que usarão a nova fonte */
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+  

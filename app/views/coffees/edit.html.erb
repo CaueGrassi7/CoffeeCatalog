@@ -1,0 +1,30 @@
+<!-- app/views/coffees/edit.html.erb -->
+
+<h1>Edit Coffee</h1>
+
+<%= form_for @coffee, url: coffee_path(@coffee), method: :patch, html: { multipart: true } do |f|  %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div>
+    <%= f.submit "Update Coffee" %>
+  </div>
+<% end %>
+<%= link_to 'Voltar à Página Inicial', root_path %>

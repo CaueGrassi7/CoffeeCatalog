@@ -1,0 +1,36 @@
+<!-- app/views/coffees/manage_catalog.html.erb -->
+
+<div class="container">
+  <h1>Gerenciar Catálogo</h1>
+
+  <!-- Adicionar formulário para criar novo café -->
+  <%= form_for @new_coffee, url: create_coffee_path, method: :post do |f| %>
+    <label for="coffee_name">Nome do Café:</label>
+    <%= f.text_field :name, id: "coffee_name", required: true %>
+
+    <label for="coffee_description">Descrição:</label>
+    <%= f.text_area :description, id: "coffee_description", required: true %>
+
+    <label for="coffee_category">Categoria:</label>
+    <%= f.text_field :category, id: "coffee_category", required: true %>
+
+    <label for="coffee_image">Imagem:</label>
+    <%= f.file_field :image, id: "coffee_image" %>
+
+    <button type="submit">Adicionar Café</button>
+  <% end %>
+
+  <!-- Adicionar a lista de cafés existentes -->
+  <h2>Catálogo:</h2>
+  <ul>
+    <% @coffees.each do |coffee| %>
+      <li>
+        <%= coffee.name %>
+        <%= link_to 'Editar', edit_coffee_path(coffee) %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Voltar à Página Inicial', root_path %>
+</div>
+
+<%= stylesheet_link_tag 'manage_catalog', media: 'all', 'data-turbolinks-track': 'reload' %>

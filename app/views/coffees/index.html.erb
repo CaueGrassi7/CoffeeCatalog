@@ -1,0 +1,21 @@
+<!-- app/views/coffees/index.html.erb -->
+
+<div class="container">
+  <h1>Coffee Catalog</h1>
+
+  <% @coffees.each do |coffee| %>
+    <div class="coffee-item">
+      <h2><%= coffee.name %></h2>
+      <p><%= coffee.description %></p>
+      <p><strong>Category:</strong> <%= coffee.category %></p>
+      <!-- Adicione a tag de imagem se você quiser exibir a imagem do café -->
+      <% if coffee.image.attached? %>
+        <%= image_tag coffee.image %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Voltar à Página Inicial', root_path %>
+</div>
+
+<%= stylesheet_link_tag 'catalog', media: 'all', 'data-turbolinks-track': 'reload' %>

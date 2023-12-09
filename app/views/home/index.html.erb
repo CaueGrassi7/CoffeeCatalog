@@ -1,0 +1,17 @@
+<!-- app/views/home/index.html.erb -->
+
+<!-- app/views/home/index.html.erb -->
+
+<div class="container">
+  <h1>Coffee App</h1>
+
+  <div>
+    <p>Escolha uma opção:</p>
+    <ul>
+      <li><%= link_to 'Visualizar Catálogo', coffees_path %></li>
+      <li><%= link_to 'Gerenciar Catálogo', manage_catalog_path %></li>
+    </ul>
+  </div>
+</div>
+
+<%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
